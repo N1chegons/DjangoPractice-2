@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>{% block title %}Главная{% endblock %}</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="{% static 'main/main.css' %}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body style="overflow-x: hidden;">  
+   
+   <div class="header">
+      <div class="container text-center">
+         <div class="row">
+         <div class="col">
+            <div class="title">ROBO.SCHOOL</div>
+         </div>
+         <div class="col-7">
+            <div class="nav">
+               <a href="{%url 'main'%}" class='nav-item'>Главная</a>
+               <a href="{%url 'about'%}" class='nav-item'>О школе</a>
+               <a href="{%url 'instr'%}" class='nav-item'>Тренеры</a>
+               <a href="{%url 'sum'%}" class='nav-item'>Стоимость</a>
+            </div>
+         </div>
+         <div class="col">
+            <div class="title">+7 800 000 11 22</div>
+         </div>
+         </div>
+      </div>
+
+
+      <div class="header-bottom">
+         <div class="content-header">
+            <h2>ROBO SCHOOL</h2>
+            <p>Курсы повышения квалификации по робототехнике для педагогов начальной школы</p>
+            <button><a href="#">Записаться на курс</a></button>
+         </div>
+         <div class="content-img-header">
+            <img src="{% static 'main/img/HBimg.png' %}" alt="">
+         </div>
+      </div>
+   
+   </div>
+
+   {% block content %}
+   <div class="info-block">
+      <div class="title-info">
+         <p><span>Robo School </span>  –  учреждение для формирования кадрового педагогического резерва в сфере робототехники <br>и программирования</p>
+      </div>
+      <div class="card-info">
+         <div class="cards">
+            <div class="container">
+               <div class="row">
+                 <div class="col">
+                  <img src="{% static 'main/img/10.png' %}" alt="">
+                  <p>УМК по различным направлениям по робототехнике</p>
+                 </div>
+                 <div class="col">
+                  <img src="{% static 'main/img/20.png' %}" alt="">
+                  <p>Школ, в которых запущена робототехника</p>
+                 </div>
+                 <div class="col">
+                  <img src="{% static 'main/img/100.png' %}" alt="">
+                  <p>Педагогов прошедших курсы повышения квалификации</p>
+                 </div>
+                 <div class="col">
+                  <img src="{% static 'main/img/10 000.png' %}" alt="">
+                  <p>УОбученных детей на базе собственных центров</p>
+                 </div>
+                 
+               </div>
+             </div>
+            
+         </div>
+      </div>
+   </div>
+
+   <div class="bonus">
+      <div class="title-bonus">
+         <span>Что вы получите после курса</span> 
+      </div>
+      <div class="card-bonus">
+         <div class="cards-bonus">
+            <div class="container">
+               <div class="row" style="width: 1123px;">
+                 <div class="col">
+                  <h5>Удостоверение</h5>
+                  <p>Дающее право преподавать робототехнику для детей 6-12 лет в образовательных учреждениях</p>
+                 </div>
+                 <div class="col">
+                  <h5>Знания</h5>
+                  <p>По основам разработки учебно-методических комплексов
+                     по робототехнике и программированию</p>
+                 </div>
+                 <div class="col">
+                  <h5>Практику</h5>
+                  <p>Возможность пройти практику  по преподаванию робототехники на базе R:ED LAB (в оффлайн или онлайн формате)</p>
+                 </div>
+                 
+               </div>
+             </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="instructors">
+      <div class="title-bonus">Профессиональные тренеры</div>
+      <!-- start -->
+      
+         <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="card-instr" style="display: flex;">
+               <img style="width: 150px;"  src="{% static 'main/img/1inst.png' %}" alt="">
+               <div class="desc" style="padding: 50px 0 0 30px;">
+                  <h3>Ирина Лайм</h3>
+                  <p>преподаватель по робототехнике</p>
+                  <a href="#">Подробнее</a>
+               </div>
+            </div>
+            
+            <div class="card-instr" style="display: flex;">
+               <img style="width: 150px;" src="{% static 'main/img/2inst.png' %}" alt="">
+               <div class="desc" style="padding: 50px 0 0 30px;">
+                  <h3>Марина Орлова</h3>
+                  <p>преподаватель по робототехнике</p>
+                  <a href="#">Подробнее</a>
+               </div>
+            </div>
+            
+            
+            <div class="card-instr" style="display: flex;">
+               <img style="width: 150px;" src="{% static 'main/img/3inst.png' %}" alt="">
+               <div class="desc" style="padding: 50px 0 0 30px;">
+                  <h3>Максим Петров</h3>
+                  <p>преподаватель по программированию</p>
+                  <a href="#">Подробнее</a>
+               </div>
+            </div>
+
+            <div class="card-instr" style="display: flex;">
+               <img style="width: 150px;" src="{% static 'main/img/4inst.png' %}" alt="">
+               <div class="desc" style="padding: 50px 0 0 30px;">
+                  <h3>Константин Назаров</h3>
+                  <p>преподаватель по робототехнике</p>
+                  <a href="#">Подробнее</a>
+               </div>
+            </div>
+            
+            
+            
+
+
+
+      <!-- end -->
+      </div>
+   </div>
+
+   <div class="pakegs">
+      <div class="title-bonus">Выберите нужный пакет</div>
+         <div class="card-pakegs-center" style="display: flex;">
+            <div class="card-pak">
+               <h3>– PRO –</h3>
+               <h1>20.000 ₽</h1>
+               <p>УМК по робототетхнике <br>и программированию</p>
+               <button><a href="#">Оставить заявку</a></button>
+            </div>
+
+            <div class="card-pak">
+               <h3>– ROBO –</h3>
+               <h1>15.000 ₽</h1>
+               <p>УМК по робототетхнике </p>
+               <button><a href="#">Оставить заявку</a></button>
+            </div>
+
+            <div class="card-pak">
+               <h3>– PROG –</h3>
+               <h1>10.000 ₽</h1>
+               <p>УМК по программированию</p>
+               <button><a href="#">Оставить заявку</a></button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="contacts">
+      <div class="info-cont">
+         <h2>Запишитесь на курс <br>со скидкой 10%</h2>
+         <p>Акция действительна до 10 марта 2022 года</p>
+      </div>
+      <div class="reg-cont">
+         <input placeholder="Имя" type="text" maxlength="20" class="inp-cont"><br>
+         <input type="tel" placeholder="Телефон" maxlength="16" class="inp-cont"><br>
+         <input type="email" placeholder="email" class="inp-cont"><br>
+         <button class="btn-cont"><a href="#" style="text-decoration: none;color: #fff;">Оформить заявку</a> </button>
+      </div>
+   </div>
+
+{% endblock %}
+
+
+   <footer style="background:#141024;
+   color: #FFF;
+   padding: 40px 100px 30px 100px;
+   ">
+    <div style="display: flex;">
+      <div class="left">
+         <h3>ROBO.SCHOOL</h3>
+         <p>© ROBO.SCHOOL</p>
+      </div>
+      <div style=" padding-top: 10px;
+      margin-left: 960px;">
+         <h3>+7 800 000 11 22</h3>
+      </div>
+    </div>
+   </footer>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="{% static 'main/main.js' %}"></script>
+</body>
+</html>

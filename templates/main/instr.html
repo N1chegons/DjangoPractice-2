@@ -1,0 +1,59 @@
+{% extends 'main/index.html' %}
+{% load static %}
+{% block title %}Наши тренеры{% endblock %}
+{% block content %}
+
+
+<div class="instructors">
+   <div class="title-bonus">Профессиональные тренеры</div>
+   <!-- start -->
+   
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+         <div class="card-instr" style="display: flex;">
+            <img style="width: 150px;"  src="{% static 'main/img/1inst.png' %}" alt="">
+            <div class="desc" style="padding: 50px 0 0 30px;">
+               <h3>Ирина Лайм</h3>
+               <p>преподаватель по робототехнике</p>
+               <a href="#">Подробнее</a>
+            </div>
+         </div>
+         
+         <div class="card-instr" style="display: flex;">
+            <img style="width: 150px;" src="{% static 'main/img/2inst.png' %}" alt="">
+            <div class="desc" style="padding: 50px 0 0 30px;">
+               <h3>Марина Орлова</h3>
+               <p>преподаватель по робототехнике</p>
+               <a href="#">Подробнее</a>
+            </div>
+         </div>
+         
+         
+         <div class="card-instr" style="display: flex;">
+            <img style="width: 150px;" src="{% static 'main/img/3inst.png' %}" alt="">
+            <div class="desc" style="padding: 50px 0 0 30px;">
+               <h3>Максим Петров</h3>
+               <p>преподаватель по программированию</p>
+               <a href="#">Подробнее</a>
+            </div>
+         </div>
+
+         <div class="card-instr" style="display: flex;">
+            <img style="width: 150px;" src="{% static 'main/img/4inst.png' %}" alt="">
+            <div class="desc" style="padding: 50px 0 0 30px;">
+               <h3>Константин Назаров</h3>
+               <p>преподаватель по робототехнике</p>
+               <a href="#">Подробнее</a>
+            </div>
+         </div>
+         
+         
+         
+
+
+
+   <!-- end -->
+   </div>
+</div>
+
+
+{% endblock %}
